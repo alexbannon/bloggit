@@ -1,0 +1,14 @@
+<h1 class="header_of_page">New Post</h1>
+<form method="post" action="/posts">
+  <label>Username:</label>
+  <select class="username_dropdown" name="post[user_id]">
+    <% @users.each do |user| %>
+    <option value="<%=user.id%>"><%=user.username%></option>
+    <%end%>
+  </select>
+  <label>Title:</label>
+  <input type="text" name="post[title]">
+  <label>Content:</label>
+  <textarea id="post_content" type="textarea" name="post[content]"></textarea>
+  <button type="submit">Post!</button>
+</form>

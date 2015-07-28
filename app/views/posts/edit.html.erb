@@ -1,0 +1,14 @@
+<h1 class="header_of_page">Edit Post</h1>
+<form method="post" action="/posts/<%=@post.id%>">
+  <input type="hidden" name="_method" value="put" />
+  <input type="hidden" name="post[user_id]" value="<%=@user.id%>">
+  <label>Title:</label>
+  <input type="text" name="post[title]" value="<%=@post.title%>">
+  <label>Content:</label>
+  <textarea id="post_content" type="textarea" name="post[content]"><%=@post.content%></textarea>
+  <button type="submit">Post!</button>
+</form>
+<form action="/posts/<%=@post.id%>/delete" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <button type="submit">Delete!</button>
+</form>

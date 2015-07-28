@@ -1,0 +1,16 @@
+<h1 class="header_of_page">Latest Posts</h1>
+<% @posts.each do |post| %>
+<div class="post_container">
+  <div class="post_header">
+    <span class="post_title"><a class="post_title" href="/posts/<%=post.id%>"><%=post.title%></a></span>
+  </div>
+  <div class="edit"><a class="edit" href="/posts/<%=post.id%>/edit">(Edit)</a></div>
+  <div class="post_subheader">
+    <span class="username"><%=User.find(post.user_id).username%></span>
+    <span class="timestamp"><%=post.created_at%></span>
+  </div>
+  <div class="post_content">
+    <span class="blog_content"><%=post.content%></span>
+  </div>
+</div>
+<%end%>

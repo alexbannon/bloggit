@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+  box-sizing: border-box;
+}
+body {
+  background: lemonchiffon;
+}
+#top_bar_container {
+  display: block;
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+}
+.menu_links {
+  margin: 0 5% 0 5%;
+  text-decoration: none;
+  color: red;
+  background-color: white;
+  border: 2px solid black;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  border-radius: 10px;
+}
+.post_container {
+  margin: 0 auto 25px auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  max-width: 800px;
+}
+.post_header {
+  font-size: 1.5em;
+  text-align: center;
+}
+.post_title {
+  text-decoration: none;
+  color: black;
+}
+.post_subheader {
+  border-bottom: 2px solid black;
+  margin: 5px 0 20px 0;
+}
+.header_of_page {
+  text-align: center;
+}
+span.username {
+  text-align: left;
+  display: inline-block;
+}
+span.timestamp {
+  text-align: right;
+  display: inline-block;
+}
+.post_content {
+  margin: 0 35px 20px 35px;
+}
+.edit {
+  text-align: center;
+  text-decoration: none;
+  color: red;
+}
+label, input, button {
+  display: block;
+  margin: 0 auto;
+}
+label {
+  text-align: center;
+}
+textarea {
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+  width: 250px;
+}
+.username_dropdown {
+  margin: 0 auto;
+  display: block;
+}
+.delete {
+  color: red;
+  text-decoration: none;
+}
+.delete_comment {
+  display: inline;
+}

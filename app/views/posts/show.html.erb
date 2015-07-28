@@ -1,0 +1,38 @@
+<h1 class="header_of_page"><%=@post.title%></h1>
+<div class="edit"><a class="edit" href="/posts/<%=@post.id%>/edit">(Edit)</a></div>
+<form action="/posts/<%=@post.id%>/delete" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <button type="submit">Delete!</button>
+</form>
+<div class="post_container">
+  <div class="post_header">
+    <span class="username"><%=User.find(@post.user_id).username%></span>
+    <span class="timestamp"><%=@post.created_at%></span>
+  </div>
+  <div class="post_content">
+    <span class="blog_content"><%=@post.content%></span>
+  </div>
+</div>
+<div class="comments_container">
+  <h3>Comments</h3>
+  <div class="comments">
+    <ul>
+      <%@post.comments.each do |comment| %>
+      <li><form class="delete_comment" action="/posts/<%=@post.id%>/comments/<%=comment.id%>" method="post">
+        <input type="hidden" name="_method" value="delete" />
+        <button class="delete_comment" type="submit">Delete</button>
+      </form>
+      (<%=comment.created_at%>) <%=comment.comment_content%></li>
+      <%end%>
+    </ul>
+    <form action="/posts/<%=@post.id%>/comments" method="post">
+      <select class="username_dropdown" name="comment[user_id]">
+        <% @users.each do |user| %>
+        <option value="<%=user.id%>"><%=user.username%></option>
+        <%end%>
+      </select>
+      <input type="hidden" name="comment[post_id]" value="<%=@post.id%>">
+      <textarea type="textarea" name="comment[comment_content]"></textarea>
+      <button type="submit">Post!</button>
+  </div>
+</div>
