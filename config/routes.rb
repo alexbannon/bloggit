@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   delete "posts/:id/delete" => "posts#destroy"
   post "posts/:id/comments" => "comments#create"
   delete "posts/:post_id/comments/:comment_id" => "comments#destroy"
+  get "users" => "users#index"
+  get "users/new" => "users#new"
+  get "users/:id" => "users#show"
+  post "users" => "users#create"
+  get "users/:id/edit" => "users#edit"
+  put "users/:id" => "users#update"
 end

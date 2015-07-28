@@ -1,0 +1,11 @@
+<h1 class="header_of_page"><%=@user.username%></h1>
+<form method="post" action="/users/<%=@user.id%>">
+  <input type="hidden" name="_method" value="put">
+  <label>Username:</label>
+  <input type="text" name="users[username]" value="<%=@user.username%>">
+  <label>Email:</label>
+  <input type="text" name="users[email]" value="<%=@user.email%>">
+  <label>Age:</label>
+  <input type="text" name="users[age]" value="<%=@user.age%>">
+  <button type="submit">Update!</button>
+</form>

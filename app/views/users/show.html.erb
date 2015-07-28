@@ -1,0 +1,7 @@
+<h1 class="header_of_page"><%=@user.username%></h1>
+<div class="edit"><a class="edit" href="/users/<%=@user.id%>/edit">(edit)</a></div>
+<ul>
+  <li>Email: <%=@user.email%></li>
+  <li>Age: <%=@user.age%></li>
+  <li>Member Since: <%=@user.created_at%></li>
+</ul>

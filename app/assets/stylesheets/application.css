@@ -25,15 +25,16 @@ body {
   border-bottom: 2px solid black;
   padding-bottom: 10px;
 }
-.menu_links {
+a.menu_links {
   margin: 0 5% 0 5%;
   text-decoration: none;
   color: red;
   background-color: white;
   border: 2px solid black;
-  border-bottom: 3px solid black;
-  border-right: 3px solid black;
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;
   border-radius: 10px;
+  padding: 1px 5px 1px 5px;
 }
 .post_container {
   margin: 0 auto 25px auto;
@@ -95,4 +96,13 @@ textarea {
 }
 .delete_comment {
   display: inline;
+}
+.users {
+  color: black;
+}
+.centered_link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
 }
